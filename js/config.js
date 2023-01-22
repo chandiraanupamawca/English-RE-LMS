@@ -13,14 +13,13 @@
  */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBmfqwCQUXEPYFTBiEiYUwqjTjtF03jz2k",
-  authDomain: "aduruthuma.firebaseapp.com",
-  databaseURL: "https://aduruthuma-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "aduruthuma",
-  storageBucket: "aduruthuma.appspot.com",
-  messagingSenderId: "986959099612",
-  appId: "1:986959099612:web:6974f183d46ecd1e582619",
-  measurementId: "G-W8JKX9LRXG"
+  apiKey: "AIzaSyDPCUg-hvQACCQHfZm0tdayoz90041bhUk",
+  authDomain: "english-re-edu.firebaseapp.com",
+  databaseURL: "https://english-re-edu-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "english-re-edu",
+  storageBucket: "english-re-edu.appspot.com",
+  messagingSenderId: "914920752033",
+  appId: "1:914920752033:web:c69653d09be6e057d401e0"
 };
 
 app =  firebase.initializeApp(firebaseConfig);
