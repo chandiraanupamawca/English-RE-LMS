@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	class="light-style layout-menu-fixed"
+	dir="ltr"
+	data-theme="theme-default"
+	data-assets-path="assets/"
+	data-template="vertical-menu-template-free"
+	>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+			/>
+		<title>Register - English RE</title>
+		<!-- Favicon -->
+		<link rel="icon" href="assets/img/favicon/icon.png" sizes="32x32">
+		<link rel="icon" href="assets/img/favicon/icon.png" sizes="192x192">
+		<link rel="apple-touch-icon" href="assets/img/favicon/icon.png">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<script src="assets/vendor/libs/jquery/jquery.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+			/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+		<script src="js/sweetalert2@11.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+		<script src="js/config.js"></script>
+		<link rel="stylesheet" href="js/MCDatepicker-master/dist/mc-calendar.min.css">
+		<script src="js/MCDatepicker-master/dist/mc-calendar.min.js"></script>
+		<style>
+			@font-face {
+			font-family: '1_un_bindumathi';
+			src: url('scss/un-bindumathi.ttf');
+			}
+			.font_class_1_un_bindumathi {
+			font-family: '1_un_bindumathi', Ubuntu-R, sans-serif !important;
+			}
+			#suc {
+			position: relative;
+			width: 320px;
+			display: block;
+			margin: 40px auto;
+			text-align: center;
+			font-family: 'Source Sans Pro', sans-serif;
+			}
+			#upper-side {
+			padding: 2em;
+			background-color: #264653;
+			display: block;
+			color: #fff;
+			border-top-right-radius: 8px;
+			border-top-left-radius: 8px;
+			}
+			#upper-sided {
+			padding: 2em;
+			background-color: #9c1309;
+			display: block;
+			color: #fff;
+			border-top-right-radius: 8px;
+			border-top-left-radius: 8px;
+			}
+			#checkmark {
+			font-weight: lighter;
+			fill: #fff;
+			margin: -3.5em auto auto 20px;
+			}
+			#status {
+			color: #fff;
+			font-weight: lighter;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 1em;
+			margin-top: -.2em;
+			margin-bottom: 0;
+			}
+			#lower-side {
+			padding: 2em 2em 5em 2em;
+			background: #fff;
+			display: block;
+			border-bottom-right-radius: 8px;
+			border-bottom-left-radius: 8px;
+			}
+			#message {
+			margin-top: -.5em;
+			color: #757575;
+			letter-spacing: 1px;
+			}
+			#contBtn {
+			position: relative;
+			top: 1.5em;
+			text-decoration: none;
+			background: #264653;
+			color: #fff;
+			margin: auto;
+			padding: .8em 3em;
+			-webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			-moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			border-radius: 25px;
+			-webkit-transition: all .4s ease;
+			-moz-transition: all .4s ease;
+			-o-transition: all .4s ease;
+			transition: all .4s ease;
+			}
+			#contBtnd {
+			position: relative;
+			top: 1.5em;
+			text-decoration: none;
+			background: #9c1309;
+			color: #fff;
+			margin: auto;
+			padding: .8em 3em;
+			-webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			-moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+			border-radius: 25px;
+			-webkit-transition: all .4s ease;
+			-moz-transition: all .4s ease;
+			-o-transition: all .4s ease;
+			transition: all .4s ease;
+			}
+			#contBtn:hover {
+			-webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+			-moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+			box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+			-webkit-transition: all .4s ease;
+			-moz-transition: all .4s ease;
+			-o-transition: all .4s ease;
+			transition: all .4s ease;
+			}
+		</style>
+		<!-- Icons. Uncomment required icon fonts -->
+		<link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+		<!-- Core CSS -->
+		<link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+		<link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+		<link rel="stylesheet" href="assets/css/demo.css" />
+		<!-- Vendors CSS -->
+		<link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+		<!-- Page CSS -->
+		<!-- Page -->
+		<link rel="stylesheet" href="assets/vendor/css/pages/page-auth.css" />
+		<!-- Helpers -->
+		<script src="assets/vendor/js/helpers.js"></script>
+		<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+		<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+		<script src="assets/js/config.js"></script>
+	</head>
+	<body>
+		<!-- Content -->
+		<style>
+			.wrpp{
+			color: #697a8d;
+			background-color: #697a8d ;
+			-webkit-tap-highlight-color : #697a8d ;
+			}
+		</style>
+		<div class="modal fade show" id="enableOTP" tabindex="-1" style="display: block;" aria-modal="true" role="dialog">
+			<div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+				<div class="modal-content p-3 p-md-5">
+					<div class="modal-body">
+						<div class="text-center mb-4">
+							<h3 class="mb-5"><i style="font-size: larger; ;" class='bx bx-lock-open'></i> One Time Password</h3>
+						</div>
+						<h6>Verify Your Mobile Number with SMS OTP</h6>
+						<p id="verifyt">Check again your phone number is right before sending the message. *Carrier rate may apply.</p>
+						<form id="enableOTPForm" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" onsubmit="return false" novalidate="novalidate">
+							<div class="col-12 fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+								<label id="whit" class="form-label" for="modalEnableOTPPhone">Phone Number</label>
+								<div class="input-group input-group-merge has-validation">
+									<span id="cc" class="input-group-text">+94</span>
+									<input id="code" type="number"  name="modalEnableOTPPhone" class="form-control phone-number-otp-mask" placeholder="202 555 0111" disabled>
+								</div>
+								<div class="fv-plugins-message-container invalid-feedback">
+									<div data-field="modalEnableOTPPhone" data-validator="notEmpty">Please enter your mobile number</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div id="recaptcha-container"></div>
+								<span style="display:none ;" id="nocap" class="badge bg-label-warning rounded-pill">Solve the Captcha</span> 
+								<br>
+								<button id="otpv" onclick="basev()" class="btn btn-primary me-sm-3 me-1">Get OTP</button>
+								<button type="reset" class="btn btn-label-secondary" onclick="closeit()" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+							</div>
+							<div></div>
+							<input type="hidden">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.getElementById("enableOTP").style.display="none"
+			
+		</script>
+		<div class="container-xxl">
+			<div class="authentication-wrapper authentication-basic container-p-y">
+				<div class="authentication-inner" style="max-width: 800px;">
+					<!-- Register -->
+					<div class="card">
+						<div class="card-body" >
+							<!-- Logo -->
+							<div class="app-brand justify-content-center"  style="margin-bottom: 0px;">
+								<a href="/" class="app-brand-link gap-2">
+								<span class="app-brand-logo demo">
+								<img src="assets/img/icons/English-RE-Logo.png" alt="English-RE-Logo" width="250px">
+								</span>
+								</a>
+							</div>
+							<!-- /Logo -->
+							<div id="popp">
+								<h4 class="mb-2">Student Register | <span class="font_class_1_un_bindumathi">ශිෂ්‍ය ලියාපදිංචිය</span></h4>
+								<h5 class="font_class_1_un_bindumathi">නව ගිණුමක් නිර්මාණය කරන්න</h5>
+								<form id="formAccountSettings" method="POST" onsubmit="return false">
+									<div class="row">
+										<div class="mb-3 col-md-6">
+											<label for="firstName" class="form-label">First Name</label>
+											<input
+												class="form-control"
+												type="text"
+												id="firstName"
+												name="firstName"
+												placeholder="Sahan"
+												autofocus
+												/>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="lastName" class="form-label">Last Name</label>
+											<input
+												class="form-control"
+												type="text"
+												name="lastName"
+												id="lastName"
+												placeholder="Sankalpa"
+												/>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="Gender" class="form-label">Gender</label>
+											<select  id="gen"  class="form-control">
+												<option value="" selected disabled>Select Gender</option>
+												<option value="male">Male</option>
+												<option value="female">Female</option>
+												<option value="other">Other</option>
+											</select>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="birthday" class="form-label">birthday</label>
+											<input class="form-control" placeholder="Click to pick" name="birthday" id="birthday" />
+										</div>
+										<script>
+											const myDatePicker = MCDatepicker.create({ 
+											el: '#birthday',
+											dateFormat: 'DD-MM-YYYY'
+											})
+										</script>
+										<div class="mb-3 col-md-6">
+											<label for="email" class="form-label">E-mail</label>
+											<input
+												class="form-control"
+												type="text"
+												id="email"
+												name="email"
+												placeholder="yourname@example.com"
+												/>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label class="form-label" for="phoneNumber">Phone Number</label>
+											<div class="input-group input-group-merge">
+												<input
+													type="tel" pattern="[0-9]*"
+													id="phoneNumber"
+													name="phoneNumber"
+													class="form-control"
+													placeholder="07XXXXXXXX"
+													/>
+											</div>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="address" class="form-label">Address</label>
+											<input
+												type="text"
+												class="form-control"
+												id="address" name="address"
+												placeholder="No.123, Hakmana Rd, Matara"
+												/>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label class="form-label" for="phoneNumber">WhatsApp Number</label>
+											<div class="input-group input-group-merge">
+												<input
+													type="text"
+													id="whatsappNumber"
+													name="whatsappNumber"
+													class="form-control"
+													placeholder="07XXXXXXXX"
+													/>
+											</div>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="stream" class="form-label">Exam</label>
+											<select id="stream" class="form-control">
+												<option value="" selected disabled>Select Exam</option>
+												<option value="OL">OL</option>
+												<option value="AL">AL</option>
+											</select>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="exam Year" class="form-label">Exam Year</label>
+											<select id="year"  class="form-control">
+												<option value="" selected disabled>Select Exam Year</option>
+												<option value="2022">2022</option>
+												<option value="2023">2023</option>
+												<option value="2024">2024</option>
+												<option value="2025">2025</option>
+												<option value="2026">2026</option>
+												<option value="2027">2027</option>
+												<option value="2028">2028</option>
+												<option value="2029">2029</option>
+												<option value="2030">2030</option>
+											</select>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="pass" class="form-label">Create Password</label>
+											<input
+												class="form-control"
+												type="password"
+												id="pw"
+												name="pw"
+												placeholder="Minimum 6 characters"
+												autofocus
+												/>
+										</div>
+										<div class="mb-3 col-md-6">
+											<label for="pass" class="form-label">Confirm Password</label>
+											<input
+												class="form-control"
+												type="password"
+												id="con"
+												name="con"
+												placeholder="Enter the same password"
+												autofocus
+												/>
+										</div>
+									</div>
+									<div class="mb-3">
+										<br>
+										<button class="btn btn-primary d-grid w-100 font_class_1_un_bindumathi" id="reg" type="submit">Register | ලියාපදිංචි වන්න</button>
+									</div>
+								</form>
+								<p class="text-center">
+									<span class="font_class_1_un_bindumathi">දැනටමත් ගිණුමක් තිබේද?</span>
+									<a href="login">
+									<span>Student Login</span>
+									</a>
+								</p>
+								<p class="text-center">
+									<b>Hotline: 0701234567</b>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- /Register -->
+				</div>
+			</div>
+		</div>
+		<!-- / Content -->
+		<!-- Core JS -->
+		<!-- build:js assets/vendor/js/core.js -->
+		<script src="js/register.js"></script>
+		<script src="assets/vendor/libs/popper/popper.js"></script>
+		<script src="assets/vendor/js/bootstrap.js"></script>
+		<script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+		<script src="assets/vendor/js/menu.js"></script>
+		<!-- endbuild -->
+		<!-- Vendors JS -->
+		<!-- Main JS -->
+		<script src="assets/js/main.js"></script>
+		<!-- Page JS -->
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		</div>
+	</body>
+</html>
