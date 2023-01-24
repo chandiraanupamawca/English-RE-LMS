@@ -19,7 +19,8 @@ const firebaseConfig = {
   projectId: "english-re-edu",
   storageBucket: "english-re-edu.appspot.com",
   messagingSenderId: "914920752033",
-  appId: "1:914920752033:web:c69653d09be6e057d401e0"
+  appId: "1:914920752033:web:c69653d09be6e057d401e0",
+  measurementId: "G-5GZ2XXKCVM"
 };
 
 app =  firebase.initializeApp(firebaseConfig);
