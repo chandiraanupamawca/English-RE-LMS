@@ -78,10 +78,10 @@
 		<!-- Scripts -->
 		<script src="js/sweetalert2@11.js"></script>
 		<script src="js/exams.js"></script>
-		<script src="js/livechat.js"></script>
 		<script src="js/viewclz.js"></script>
 		<script src="js/slips.js"></script>
 		<script src="js/payments.js"></script>
+		<!-- <script src="js/livechat.js"></script> -->
 		<script>
 			if(localStorage.getItem("myclzz")==null){
 			  localStorage.setItem("myclzz",JSON.stringify({}))	
@@ -569,7 +569,10 @@
 						<footer class="footer bg-light">
 							<div class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-3">
 								<div style="color: #697a8d;" class="change">
-									<b>&copy; Copyright 2023 | Aduruthuma Learning Management System</b>
+									<b>&copy; Copyright 
+									<script>
+									document.write(new Date().getFullYear());
+									</script> | Aduruthuma Learning Management System</b>
 								</div>
 								<div>
 									<a href="javascript:void(0)" class="footer-link me-4 change" style="color: #697a8d;"><i class="bx bx-power-off me-2"></i> <span class="align-middle">Log Out</span></a>
