@@ -5,7 +5,7 @@ sid = localStorage.getItem("sid")
 siid = localStorage.getItem("sid")
 
 function viewclass() {
-  openchart()
+  //openchart()
 
   function loadin() {
      var path = "live/" + cid
