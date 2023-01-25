@@ -108,7 +108,7 @@
 													<a href="javascript:;" class="btn btn-primary active mb-2" id="upload-slip" onclick="document.getElementById('picker').click() ">Upload Bank Slip</a>
 													<a style="display:none;" href="javascript:;"><input onchange="uploadslip()"  id="picker" type="file" accept="image/*,application/pdf"></a>
 													&nbsp;
-													<a href="javascript:;" class="btn btn mb-2" style="background-color:#f64e5f ; color: #fff;" id="Pay Online">Pay Online</a><br><br> 
+													<a href="javascript:;" class="btn btn mb-2" style="background-color:#f64e5f ; color: #fff;" id="Bank Details">Bank Details</a><br><br> 
 												</div>
 												<div class="col-lg align-middle" style="width:auto ; margin-right: 20px;">
 													<div class="align-middle" style="width:auto ; color: aliceblue;" >
@@ -304,62 +304,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div id="payroot" style="display:none ; align-content: center; ">
-	<div class="col-md-6 col-lg-4 mb-4" style="width: 100% ;">
-	<div class="card h-100">
-		<div class="card-header d-flex align-items-center justify-content-between">
-			<h5 class="card-title m-0 me-2">Select Online Payment Method</h5>
-			<div class="dropdown">
-				<button class="btn p-0" type="button" id="purchaseItemList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="bx bx-dots-vertical-rounded"></i>
-				</button>
-				<div class="dropdown-menu dropdown-menu-end" aria-labelledby="purchaseItemList">
-					<a class="dropdown-item" href="javascript:void(0);">Topup Wallet</a>
-					<a class="dropdown-item" href="javascript:void(0);">Check Wallet Balance</a>
-					<a class="dropdown-item" href="javascript:void(0);">Learn more about English RE Gift Codes</a>
-				</div>
-			</div>
-		</div>
-		<div class="card-body">
-			<form id="businessForm" onsubmit="return false">
-			<form>
-				<div class="row">
-					<div class="col">
-						<img src="assets/img/icons/unicons/paypal.png" height="60px" alt="PayHere Icon"> <br><br>
-						<input  onchange="validp(this.id)" id="payhere" type="radio" name="method" class="form-check-input" checked> <span><b>PayHere</b></span>
-					</div>
-					<div class="col">
-						<img src="assets/img/icons/unicons/wallet-info.png" height="60px" alt="Wallet Icon"> <br><br>
-						<input onchange="validp(this.id)"  id="wallet" type="radio" name="method" class="form-check-input"> <span><b>Wallet</b></span>
-					</div>
-					<div class="col">
-						<img src="assets/img/icons/unicons/cc-warning.png" height="60px" alt="Gift Icon"> <br><br>
-						<input onchange="validp(this.id)" id="gift" type="radio" name="method" class="form-check-input"> <span><b>Gift Code</b></span>
-			</form>
-			</div>
-			</div>
-			<br>
-			<br>
-			<div class="d-flex justify-content-between mb-1">
-				<span >Class Fee</span>
-				<span id="fee2" >Fetching...</span>
-			</div>
-			<div class="d-flex justify-content-between mb-1">
-				<span >Service Charges</span>
-				<span class="cutfee" id="cutfee">Computing</span>
-			</div>
-			<hr>
-			<div class="d-flex justify-content-between">
-				<span class="fw-bold">Total Amount</span>
-				<b></b><span class="h5 text-primary mb-0 tota" id="tota">Rs. 0</span></b>
-			</div>
-			<hr>
-			<div class="col-12 text-center">
-				<button type="submit" class="btn btn-primary w-100 d-grid phstartpay">Pay Now</button>
-			</div>
-			</form>
 		</div>
 	</div>
 </body>

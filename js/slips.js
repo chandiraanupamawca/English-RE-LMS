@@ -1,11 +1,13 @@
 function slipsjs (){
-  $$('Pay Online').onclick = function () {
+  $$('Bank Details').onclick = function () {
     Swal.fire({
-       html:$$('payroot').innerHTML,
-       showConfirmButton:false,
-     width:"790px"
+      title: 'Bank Details',
+      html: "Bank: National Savings Bank (NSB) <br> Branch: Beliatta Branch <br> Account Number: 100480169447",
+      icon: 'info',
+      showCancelButton: true,
+      cancelButtonColor: '#696cff',
+      showConfirmButton: false
       })
-      validp('payhere')
   }
 }
 function paynot (dy){
@@ -17,8 +19,8 @@ function paynot (dy){
        if(dy[month]["url"].includes("http")){
   $$('paytext').innerText='Your payment is pending for verification. \n Try Online Payments for quick payments'
   $$('upload-slip').innerText = "View Uploaded Slip"
-  $$('Pay Online').innerText = "Delete Slip"
-  $$('Pay Online').onclick = function (){
+  $$('Bank Details').innerText = "Delete Slip"
+  $$('Bank Details').onclick = function (){
       Swal.fire({
           title: 'Are you sure?',
           text: "You won't be able to revert this!",

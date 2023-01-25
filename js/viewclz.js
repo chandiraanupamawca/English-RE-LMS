@@ -77,9 +77,9 @@ function viewclass() {
 
   $$("cida").innerText = " ID " + cid
   $$("class-topic").innerText = l["topic"]
-  document.title = l["topic"] + " | Aduruthuma"
+  document.title = l["topic"] + " | English RE"
   analytics.logEvent('View_Class', {
-     classname: l["topic"] + " | Aduruthuma"
+     classname: l["topic"] + " | English RE"
   });
 
   classtopic = l["topic"]

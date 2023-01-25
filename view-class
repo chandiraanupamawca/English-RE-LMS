@@ -336,7 +336,7 @@ tp = localStorage.getItem("tp")
                                                             </p>
                                                             <a href="javascript:;" class="btn btn-primary mb-2" id="upload-slip">Upload Bank Slip</a>
                                                             &nbsp;
-                                                            <a href="javascript:;" class="btn btn-primary mb-2" id="Pay Online">Pay Online</a>
+                                                            <a href="javascript:;" class="btn btn-primary mb-2" id="Bank Details">Bank Details</a>
                                                           </div>
                                                         </div>
                                                         <div class="col-sm-4 text-center mt-4">
@@ -471,8 +471,8 @@ tp = localStorage.getItem("tp")
                                                                                 <strong>Play Times Left: </strong><span id="left-plays">1</span> of total <span id="total-plays">2</span>
                                                                             </li>
                                                                             <li type="none" class="mt-3">
-                                                                                <a href="javascript:;" class="btn btn-primary mb-2" id="Pay Online">Watch Class Video</a>
-                                                                            </li>
+																				<a href="javascript:;" class="btn btn-primary mb-2 wtchr" id="wtchr" onclick="getzak(this.id,this.dt,this.se,this.times,this.usea)">Watch Class Video</a>
+																			</li>
                                                                           </ul>
                                                                         </div>
                                                                       </div>
@@ -496,7 +496,10 @@ tp = localStorage.getItem("tp")
 						<footer class="footer bg-light">
 							<div class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-3">
 								<div style="color: #697a8d;">
-									<b>© Copyright 2022 | Aduruthuma Learning Management System</b>
+									<b><b>&copy; Copyright 
+									<script>
+									document.write(new Date().getFullYear());
+									</script> | Aduruthuma Learning Management System</b></b>
 								</div>
 								<div>
 									<a href="javascript:void(0)" class="footer-link me-4" style="color: #697a8d;"><i class="bx bx-power-off me-2"></i> <span class="align-middle">Log Out</span></a>
