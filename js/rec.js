@@ -103,9 +103,8 @@ var url2 ="https://server-10.lankaedu.tk/zak";
  if(xhr2.response=="Class fees not paid"){
    Swal.fire({
      icon: 'warning',
-     title: 'Class fees not paid',
-     text: "Please enroll into the class",
-     footer: '<a href="">Payment Section</a>'
+     title: 'Class Fees Not Paid!',
+		 text: "Please pay Class fees to access this Recording"
    })
  } else {
    if(xhr2.response.includes("zackgot==")){

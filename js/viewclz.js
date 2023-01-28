@@ -17,9 +17,6 @@ function viewclass() {
      path = "exams/" + localStorage.getItem("nclz")
      const dbRefObject22xq = firebase.database().ref().child(path);
      dbRefObject22xq.once('value', snap => examsq(snap.val()));
-     path = "livechat/" + localStorage.getItem("nclz")
-     const dbRefObject22xqq = firebase.database().ref().child(path);
-     dbRefObject22xqq.on('value', snap => livechat(snap.val()));
      var path = "strecordings/" + cid
      const dbRefObject745 = firebase.database().ref().child(path);
 
@@ -334,9 +331,8 @@ function joinl(id) {
            if (xhr2.response == "Class fees not paid") {
               Swal.fire({
                  icon: 'warning',
-                 title: 'Class fees not paid',
-                 text: "Please enroll into the class",
-                 footer: '<a href="">Payment Section</a>'
+                 title: 'Class Fees Not Paid!',
+					  text: "Please pay Class fees to join this Meeting"
               })
            } else {
               if (xhr2.response.includes("zoom.us/w")) {

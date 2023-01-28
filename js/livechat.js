@@ -1,3 +1,4 @@
+/*
 //<![CDATA[
 
   const Toastz = Swal.mixin({
@@ -143,3 +144,4 @@ firebase.database().ref("livechat/"+cid+"/"+id).set({}).then((x)=>{
   })
 })
 }
+*/

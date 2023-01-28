@@ -136,9 +136,8 @@ function startex(thisid, exname) {
 				if (xhr2.response == "Class fees not paid") {
 					Swal.fire({
 						icon: 'warning',
-						title: 'Class fees not paid',
-						text: "Please enroll into the class",
-						footer: '<a href="">Payment Section</a>'
+						title: 'Class Fees Not Paid!',
+						text: "Please pay Class fees to access this Exam"
 					})
 				} else {
 					if ((xhr2.response).includes('firebasestorage.googleapis.com')) {
