@@ -66,6 +66,25 @@
 		color: #fff !important;
 		}
 	</style>
+	<style>
+		#payments-banner{
+			border: solid 1px #264653; 
+			background-color: #1c2840; 
+			background-position: calc(100% + 0.5rem) bottom; 
+			background-size: 20% auto; 
+			background-image: url(assets/img/illustrations/student-studying-on-laptop.svg);
+			background-repeat: no-repeat;
+		}
+		@media (max-width: 760px) {
+			#payments-banner{ 
+			background-size: 30% auto; 
+		}}
+		@media (max-width: 600px) {
+			#payments-banner{ 
+			background-image: none;
+		}
+	}
+	</style>
 	<!-- Icons. Uncomment required icon fonts -->
 	<!-- Core CSS -->
 	<!-- Vendors CSS -->
@@ -87,7 +106,7 @@
 						<br><br>
 						<!--Class Payement-->
 						<div class="col-lg mb-4 order-0 " id="notpayalert" style="display:none;" >
-							<div class="card" class="card"style="border: solid 1px #264653; background-color: #1c2840; background-position: calc(100% + 0.5rem) bottom; background-size: 20% auto; background-image: url(assets/img/illustrations/student-studying-on-laptop.svg);background-repeat: no-repeat;">
+							<div class="card" class="card" id="payments-banner">
 								<div class="d-flex row" >
 									<div class="col">
 										<div class="card-body" style="padding-bottom: 0px;">
@@ -114,9 +133,9 @@
 													<div class="align-middle" style="width:auto ; color: aliceblue;" >
 														<p>
 															<br>
-															<span class="fw-bold">Student ID: </span><span id="st-id">AD-0000</span>
+															<span class="fw-bold">Student ID: </span><span id="st-id2">RE0000</span>
 															<br>
-															<span class="fw-bold">Name: </span><span id="st-name">Student Name</span>
+															<span class="fw-bold">Name: </span><span id="st-name2">Student Name</span>
 															<br>
 															<span class="fw-bold">Month: </span><span id="current-month">Checking..</span>
 														</p>

@@ -17,7 +17,7 @@ function paynot (dy){
 
   if(dy[month]!=null){
        if(dy[month]["url"].includes("http")){
-  $$('paytext').innerText='Your payment is pending for verification. \n Try Online Payments for quick payments'
+  $$('paytext').innerText='Your payment is pending for verification. \n This may take upto 24 hours'
   $$('upload-slip').innerText = "View Uploaded Slip"
   $$('Bank Details').innerText = "Delete Slip"
   $$('Bank Details').onclick = function (){
@@ -59,7 +59,7 @@ open(dy[month]["url"], 'test', params);
       } else{
         if(dy[month]["url"].includes("reject")){
           $$('paytext').className = "mb-4"+" text-danger fw-bold"
-          $$('paytext').innerText='Your slip was rejected. \n Contact call center for support'
+          $$('paytext').innerText='Your slip was rejected. \n Contact 078 713 4053 for support'
           $$('upload-slip').innerText = "Re-Upload Slip"
         
       
@@ -156,7 +156,6 @@ function uploadslip (){
   fee:mfeeval
        }).then((result) => {
           Swal.fire({
-              position: 'top-end',
               icon: 'success',
               title: 'Your Slip has been successfully Uploaded!',
               showConfirmButton: false,
@@ -166,7 +165,7 @@ function uploadslip (){
             })
   
        })
-       telenot("<b>🔴 New Payment Slip has been uploaded </b> \n<b>Student ID</b> : "+ sid + "\n<b>Student Name</b> : "+localStorage.getItem("stname")+ "\n<b>Class ID</b> : "+cid+ "\n<b>Class Name</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["topic"]+ "\n<b>Class Scheduele</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["time"]+ "\n<b>Teacher</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["name"]+ "\n<b>URL</b> : "+downloadURL  )
+       telenot("<b>🔵 New Payment Slip has been uploaded </b> \n<b>Student ID</b> : "+ sid + "\n<b>Student Name</b> : "+localStorage.getItem("stname")+ "\n<b>Class ID</b> : "+cid+ "\n<b>Class Name</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["topic"]+ "\n<b>Class Scheduele</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["time"]+ "\n<b>Teacher</b> : "+JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]["name"]+ "\n<b>URL</b> : "+downloadURL  )
   
           
       

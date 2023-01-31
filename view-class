@@ -341,9 +341,9 @@ tp = localStorage.getItem("tp")
                                                         </div>
                                                         <div class="col-sm-4 text-center mt-4">
                                                             <p>
-                                                                <span class="fw-bold">Student ID: </span><span id="st-id">AD-0000</span>
+                                                                <span class="fw-bold">Student ID: </span><span id="st-id2">RE0000</span>
                                                                 <br>
-                                                                <span class="fw-bold">Name: </span><span id="st-name">Student Name</span>
+                                                                <span class="fw-bold">Name: </span><span id="st-name2">Student Name</span>
                                                                 <br>
                                                                 <span class="fw-bold">Month: </span><span id="current-month">Checking..</span>
                                                             </p>

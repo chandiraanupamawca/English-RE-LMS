@@ -32,18 +32,18 @@ function viewclass() {
         if (d["sts"] != "Live") {
            $('#jcont').fadeIn()
            $$('div-join-class').style.display = 'none'
-           $$("live-class-status").innerText = "Virtual Classroom has not started yet"
+           $$("live-class-status").innerText = "Virtual Classroom has not started yet!"
 
         } else {
            mid = d["id"]
            $('#div-join-class').fadeIn()
-           $$("live-class-status").innerText = "Virtual Classroom has been started !"
+           $$("live-class-status").innerText = "Virtual Classroom has been started!"
 
 
         }
      } else {
         $$('div-join-class').style.display = 'none'
-        $$("live-class-status").innerText = "Virtual Classroom has not started yet"
+        $$("live-class-status").innerText = "Virtual Classroom has not started yet!"
      }
   }
   time = Math.floor(Date.now() / 10)
@@ -68,8 +68,8 @@ function viewclass() {
   });
   var siid = JSON.parse(localStorage.getItem("stdata"))["id"]
   sid = "RE" + ("000" + siid).slice(-4)
-  $$("st-id").innerText = sid
-  $$("st-name").innerText = localStorage.getItem("stname")
+  $$("st-id2").innerText = sid
+  $$("st-name2").innerText = localStorage.getItem("stname")
   l = JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]
 
   $$("cida").innerText = " ID " + cid
@@ -125,8 +125,8 @@ function viewclass() {
 
               var siid = JSON.parse(localStorage.getItem("stdata"))["id"]
               sid = "RE" + ("000" + siid).slice(-4)
-              $$("st-id").innerText = sid
-              $$("st-name").innerText = localStorage.getItem("stname")
+              $$("st-id2").innerText = sid
+              $$("st-name2").innerText = localStorage.getItem("stname")
               l = JSON.parse(localStorage.getItem("clzdata"))[cid]["info"]
               $$("class-topic").innerText = l["topic"]
               $$("teacher").innerText = l["name"]
