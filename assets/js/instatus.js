@@ -4,15 +4,15 @@
 	 * you can change widget configuration from here
 	 */
 	const CONFIG = {
-		url: 'https://aduruthuma.instatus.com',
-		frameUrl: 'https://aduruthuma.instatus.com/widget',
+		url: 'https://englishre.instatus.com',
+		frameUrl: 'https://englishre.instatus.com/widget',
 		position: 'bottom-right',
 		incident: {
-			textColor: '#3f42b9',
+			textColor: '#696cff',
 			backgroundColor: '#FFFFFF',
 		},
 		maintenance: {
-			textColor: '#3f42b9',
+			textColor: '#696cff',
 			backgroundColor: '#FFFFFF',
 		},
 		text: {"viewLatestUpdates":"View latest updates","lastUpdated":"Last updated {{time}} ago","scheduledFor":"Scheduled for","year":"year","years":"years","month":"month","months":"months","day":"day","days":"days","hour":"hour","hours":"hours","minute":"minute","minutes":"minutes"},
@@ -34,7 +34,7 @@
 	}
 
 	async function fetchIssues() {
-		let result = await fetch(CONFIG.url + '/issues.json').then((res) => {
+		let result = await fetch(CONFIG.url + '/7919c901/issues.json').then((res) => {
 			if (res.ok) {
 				return res.json();
 			} else {
@@ -47,7 +47,7 @@
 		result.activeIncidents?.forEach((incident) => {
 			issues.push({
 				type: 'incident',
-				id: incident.started.replace(/s/g, ''),
+				id: incident.id,
 				status: incident.status,
 				title: incident.name,
 				updatedAt: incident.started,
@@ -59,7 +59,7 @@
 		result.activeMaintenances?.forEach((maintenance) => {
 			issues.push({
 				type: 'maintenance',
-				id: maintenance.start.replace(/s/g, ''),
+				id: maintenance.id,
 				status: maintenance.status,
 				title: maintenance.name,
 				updatedAt: maintenance.start,
@@ -109,7 +109,7 @@
 
 		let frame = document.createElement('iframe');
 		frame.id = issue.id;
-		frame.src = CONFIG.frameUrl + '?url=' + encodeURIComponent(CONFIG.url) + '&issue=' + encodeURIComponent(JSON.stringify(issue)) + '&type=' + issue.type;
+		frame.src = CONFIG.frameUrl + '?url=' + encodeURIComponent(CONFIG.url + '/' + issue.id) + '&issue=' + encodeURIComponent(JSON.stringify(issue)) + '&type=' + issue.type;
 		frame.style.position = 'fixed';
 		frame.style.border = 'none';
 		frame.style.boxShadow = '0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25)'
@@ -203,7 +203,7 @@
 
 	function updateIssue(issue) {
 		let frame = frames.find((frame) => frame.id === issue.id);
-		let newSrc = CONFIG.frameUrl + '?url=' + encodeURIComponent(CONFIG.url) + '&issue=' + encodeURIComponent(JSON.stringify(issue));
+		let newSrc = CONFIG.frameUrl + '?url=' + encodeURIComponent(CONFIG.url + '/' + issue.id) + '&issue=' + encodeURIComponent(JSON.stringify(issue));
 		if (newSrc !== frame.src) {
 			frame.src = newSrc;
 		}
