@@ -30,7 +30,7 @@ try {
 $$('mydev').getElementsByClassName('ip')[0].innerHTML = '<i class="bx bx-wifi"></i> '+dis["ip"]
 $$('mydev').getElementsByClassName('time')[0].innerHTML ='<i class="bx bx-time-five"></i> '+ moment(dis["ts"],"X").format("YYYY-MM-DD hh:mm:ss")
 $$('mydev').getElementsByClassName('location')[0].innerHTML ='<i class="bx bxs-map-pin"></i>  '+(dis["location"]).replace("|","<br>")
-$$('mydev').getElementsByClassName('bra')[0].innerHTML ='<i class="bx bx-globe"></i>  '+dis["browser"]
+$$('mydev').getElementsByClassName('brow')[0].innerHTML ='<i class="bx bx-globe"></i>  '+dis["browser"]
 if((dis["ismob"]).toString()=="true"){
     console.log("mm")
     $$('mydev').getElementsByTagName('img')[0].src = 'assets/img/elements/iphone14-pro.png'
@@ -41,8 +41,9 @@ if((dis["ismob"]).toString()=="true"){
 }
 
 } catch (error) {
-    document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 10 seconds")
-    setTimeout(location.replace("/"),10000)
+    console.log(error)
+    //document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 10 seconds")
+    //setTimeout(location.replace("/"),10000)
 }
 
 var array = Object.keys(xz)
@@ -61,7 +62,7 @@ if(d!=thisdz){
     clone.getElementsByClassName('ip')[0].innerHTML = '<i class="bx bx-wifi"></i> '+e["ip"]
     clone.getElementsByClassName('time')[0].innerHTML ='<i class="bx bx-time-five"></i> '+ moment(e["ts"],"X").format("YYYY-MM-DD hh:mm:ss")
     clone.getElementsByClassName('location')[0].innerHTML ='<i class="bx bxs-map-pin"></i>  '+(e["location"]).replace("|","<br>")
-    clone.getElementsByClassName('bra')[0].innerHTML ='<i class="bx bx-globe"></i>  '+e["browser"]
+    clone.getElementsByClassName('brow')[0].innerHTML ='<i class="bx bx-globe"></i>  '+e["browser"]
     if((e["ismob"]).toString()=="true"){
 
         clone.getElementsByTagName('img')[0].src = 'assets/img/elements/iphone14-pro.png'
@@ -89,8 +90,9 @@ var tt = localStorage.authid
 try {
     var thisdz = CryptoJS.AES.decrypt(localStorage.getItem("lux"),tt).toString(CryptoJS.enc.Utf8)
 } catch (error) {
-    document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 5 seconds")
-    setTimeout(location.replace("/"),5000)
+    console.log(error)
+    //document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 5 seconds")
+    //setTimeout(location.replace("/"),5000)
 }
 firebase.database().ref("sessions/"+uid).on('value', snap => thisd(snap.val()))})
 
