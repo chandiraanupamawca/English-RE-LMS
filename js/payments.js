@@ -27,13 +27,13 @@
     };
       document.getElementsByClassName('cutfee')[1].innerText= (parseInt(mfeeval)*2.69/100).toFixed(2)+ " LKR"
       document.getElementsByClassName('tota')[1].innerText =(parseInt(mfeeval)*2.69/100+parseInt(mfeeval)).toFixed(2)+ " LKR"
-      document.getElementsByClassName('phstartpay')[1].onclick = function (){ payhere.startPayment(payment);
+      document.getElementsByClassName('paybypayhere')[1].onclick = function (){ payhere.startPayment(payment);
       }
     } else {
       console.log('elsing')
       document.getElementsByClassName('cutfee')[1].innerText= 0+ " LKR"
       document.getElementsByClassName('tota')[1].innerText =mfeeval+ " LKR"
-      document.getElementsByClassName('phstartpay')[1].onclick = function (){ console.log("elpay")
+      document.getElementsByClassName('paybypayhere')[1].onclick = function (){ console.log("elpay")
       }
   
     }
