@@ -42,8 +42,13 @@ if((dis["ismob"]).toString()=="true"){
 
 } catch (error) {
     console.log(error)
+    Swal.fire({
+        title: 'An Error Occured',
+        text: "An Error Occured while fetching your sessions\n Redirecting you to home in 10 seconds",
+        icon: 'warning'
+    })
     //document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 10 seconds")
-    //setTimeout(location.replace("/"),10000)
+    setTimeout(location.replace("/"),10000)
 }
 
 var array = Object.keys(xz)
@@ -91,8 +96,13 @@ try {
     var thisdz = CryptoJS.AES.decrypt(localStorage.getItem("lux"),tt).toString(CryptoJS.enc.Utf8)
 } catch (error) {
     console.log(error)
-    //document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 5 seconds")
-    //setTimeout(location.replace("/"),5000)
+    Swal.fire({
+        title: 'An Error Occured',
+        text: "An Error Occured while fetching your sessions\n Redirecting you to home in 10 seconds",
+        icon: 'warning'
+    })
+    //document.write("You are not allowed to use this page at this time.Please Try again later! \n Redirecting you to home in 10 seconds")
+    setTimeout(location.replace("/"),10000)
 }
 firebase.database().ref("sessions/"+uid).on('value', snap => thisd(snap.val()))})
 
