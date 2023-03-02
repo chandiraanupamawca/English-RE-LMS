@@ -1,5 +1,4 @@
-var getcurrentuser = localStorage.getItem("stname")
-console.log(getcurrentuser)
+var getcurrentuser = localStorage.getItem("stname");
 if (getcurrentuser) {
   // User is signed in
       Swal.fire({

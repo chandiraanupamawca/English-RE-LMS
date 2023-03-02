@@ -369,26 +369,19 @@ function joinl(id) {
                           })
                        },
                        () => {
-                          Swal.fire({
-                             title: 'Now focus on the lesson 🥳',
-                             text: 'You can now close the browser window',
-                             icon: 'success',
-                             showCloseButton: true,
-                             confirmButtonText: "Close Window",
-                             showDenyButton: true,
-                             denyButtonText: "Retry Zoom Launch"
-                          }).then((x) => {
-                             if (x.isConfirmed) {
-                                window.location.href = "https://englishre.xyz"
-                             } else {
-                                if (x.isDenied) {
-                                   window.open(df)
-
-                                }
-                             }
-
-                          })
-                       }, 5000
+                        Swal.fire({
+                           title: 'Meeting Launched Successfully',
+                           text: 'You can now close the browser window',
+                           icon: 'success',
+                           showCloseButton: true,
+                           confirmButtonText: "Relaunch Zoom Meeting",
+                           showDenyButton: false
+                        }).then((x) => {
+                           if (x.isConfirmed) {
+                            window.open(df)
+                           }
+                        })
+                     }, 5000
                     );
                  })
               } else {
@@ -432,7 +425,7 @@ function joinl(id) {
                  Swal.fire({
                     icon: 'info',
                     title: 'We detected ZOOM in not installed in your device',
-                    text: 'English RE LMS uses ZOOM for Online Sessions',
+                    text: 'English RE LMS uses Zoom for Online Sessions',
                     confirmButtonText: "Try to Open Anyway",
                     footer: '<a href="https://zoom.us/download">ZOOM DOWNLOAD CENTER</a>',
 
@@ -445,23 +438,16 @@ function joinl(id) {
               },
               () => {
                  Swal.fire({
-                    title: 'Now focus on the lesson 🥳',
+                    title: 'Meeting Launched Successfully',
                     text: 'You can now close the browser window',
                     icon: 'success',
                     showCloseButton: true,
-                    confirmButtonText: "Close Window",
-                    showDenyButton: true,
-                    denyButtonText: "Retry Zoom Launch"
+                    confirmButtonText: "Relaunch Zoom Meeting",
+                    showDenyButton: false
                  }).then((x) => {
                     if (x.isConfirmed) {
-                       window.location.href = "https://englishre.xyz"
-                    } else {
-                       if (x.isDenied) {
-                          window.open(df)
-
-                       }
+                     window.open(df)
                     }
-
                  })
               }, 5000
            );

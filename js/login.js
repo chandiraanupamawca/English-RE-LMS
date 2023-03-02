@@ -61,7 +61,7 @@ function checkd() {
 			)
 		} else {
 
-			var email = $$("username").value + "@englishre.xyz"
+			var email = $$("username").value + "@englishre.tk"
 			var password = $$("password").value
 			firebase.auth().signInWithEmailAndPassword(email, password)
 				.then((userCredential) => {

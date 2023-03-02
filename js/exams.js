@@ -149,7 +149,7 @@ function startex(thisid, exname) {
 					} else {
 						Swal.fire({
 							icon: 'warning',
-							title: 'Unable to enroll the exam',
+							title: 'Unable to Enroll into the Exam',
 							text: xhr2.response,
 							footer: '<a href="tel:0787134053">Support Hotline</a>'
 						})

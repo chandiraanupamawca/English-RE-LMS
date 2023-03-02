@@ -224,7 +224,7 @@ var pageSize = doc.internal.pageSize;
 var pageHeight = pageSize.height
 var pageWidth = pageSize.width
 var myImage = new Image();
-myImage .src = 'assets/img/icons/LMS-Logo.png';
+myImage .src = 'assets/img/icons/English-RE-Logo.png';
 myImage .onload = function(){
 doc.addImage(myImage, 'png', 120,8, 75, 30)
 doc.setFontSize(20);
@@ -281,4 +281,7 @@ doc.save($$('mname').innerText+' | Student_ID_'+$$('sidd').innerText +'_Resul_ S
 
 }}
   </script>
+  <div class="buy-now">
+    <a class="btn btn-danger btn-buy-now" id="hell" style="color:#ffff ;">Buy Now</a>
+  </div>
 </html>
