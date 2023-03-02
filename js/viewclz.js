@@ -321,8 +321,8 @@ function joinl(id) {
   function newl() {
      var xhr2 = new XMLHttpRequest();
 
-     // var url2 = "https://server-03.lankaedu.tk/zoom";
-     var url2 = "https://server-03.lankaedu.tk/zoom";
+     // var url2 = "https://server-03.englishre.xyz/zoom";
+     var url2 = "https://server-03.englishre.xyz/zoom";
      xhr2.open("POST", url2, true);
      xhr2.setRequestHeader("Content-Type", "application/json");
 
@@ -379,7 +379,7 @@ function joinl(id) {
                              denyButtonText: "Retry Zoom Launch"
                           }).then((x) => {
                              if (x.isConfirmed) {
-                                window.location.href = "https://englishre.tk"
+                                window.location.href = "https://englishre.xyz"
                              } else {
                                 if (x.isDenied) {
                                    window.open(df)
@@ -454,7 +454,7 @@ function joinl(id) {
                     denyButtonText: "Retry Zoom Launch"
                  }).then((x) => {
                     if (x.isConfirmed) {
-                       window.location.href = "https://lankaedu.tk"
+                       window.location.href = "https://englishre.xyz"
                     } else {
                        if (x.isDenied) {
                           window.open(df)

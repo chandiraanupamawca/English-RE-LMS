@@ -5,9 +5,9 @@
       var payment = {
         "sandbox": true,
         "merchant_id": "1220889",    // Replace your Merchant ID
-        "return_url": "https://lms.lankaedu.tk/view-class",     // Important
-        "cancel_url": "https://lms.lankaedu.tk/view-class",     // Important
-        "notify_url": "https://server-05.lankaedu.tk/notify",
+        "return_url": "https://lms.englishre.xyz/view-class",     // Important
+        "cancel_url": "https://lms.englishre.xyz/view-class",     // Important
+        "notify_url": "https://server-05.englishre.xyz/notify",
         "order_id": "PH"+cid+"UID"+siid+"MID"+moment(time).local().format('MM'),
         "items": classtopic,
         "amount": (parseInt(mfeeval)*2.69/100+parseInt(mfeeval)).toFixed(2),

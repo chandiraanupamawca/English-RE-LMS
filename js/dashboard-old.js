@@ -103,7 +103,7 @@ function joinl(id) {
 	function newl() {
 		var xhr2 = new XMLHttpRequest();
 
-		var url2 = "https://server-03.lankaedu.tk/zoom";
+		var url2 = "https://server-03.englishre.xyz/zoom";
 		//url2 ="http://localhost:5000/zak";
 		xhr2.open("POST", url2, true);
 		xhr2.setRequestHeader("Content-Type", "application/json");

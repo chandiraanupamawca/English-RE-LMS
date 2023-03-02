@@ -126,7 +126,7 @@ function startex(thisid, exname) {
 		var xhr2 = new XMLHttpRequest();
 
 
-		var url2 = "https://server-07.lankaedu.tk/getex";
+		var url2 = "https://server-07.englishre.xyz/getex";
 		xhr2.open("PATCH", url2, true);
 		xhr2.setRequestHeader("Content-Type", "application/json");
 

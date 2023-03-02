@@ -16,7 +16,7 @@ function xhrs (){
   Swal.showLoading()
   var xhr2 = new XMLHttpRequest();
   
-  var url2 ="https://server-07.lankaedu.tk/mcq";
+  var url2 ="https://server-07.englishre.xyz/mcq";
  //var url2 ="http://localhost:5000/mcq";
   xhr2.open("POST", url2, true);
   xhr2.setRequestHeader("Content-Type", "application/json");

@@ -95,7 +95,7 @@ function getzak (id,dta,se,times,usea1){
  function newl(){
    var xhr2 = new XMLHttpRequest();
  
-var url2 ="https://server-10.lankaedu.tk/zak";
+var url2 ="https://server-10.englishre.xyz/zak";
  xhr2.open("POST", url2, true);
  xhr2.setRequestHeader("Content-Type", "application/json");
  xhr2.onreadystatechange = function () {
