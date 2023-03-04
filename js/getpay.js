@@ -60,7 +60,10 @@ function openit(y) {
 }
 
 function getpay(en) {
-	load = en
+	if(en==null){
+		$$('nullbanner').style.display = "inline"
+	} else {
+		load = en
 	console.log(en)
 	var cids = Object.keys(en)
 	for (let c = 0; c < cids.length; c++) {
@@ -103,6 +106,7 @@ function getpay(en) {
 			cell6.getElementsByClassName('viewi')[0].id = ex["cid"] + "&" + ex["mid"]
 
 		}
+	}
 	}
 }
 firebase.auth().onAuthStateChanged((user) => {

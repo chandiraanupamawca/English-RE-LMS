@@ -179,11 +179,11 @@
 												<div class="d-flex">
 													<div class="flex-shrink-0 me-3">
 														<div class="avatar avatar-online">
-															<img id="dp2" src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+															<img id="dp2"  src="assets/img/avatars/1.png" alt class="w-px-40 h-px-40 rounded-circle" />
 														</div>
 													</div>
 													<div class="flex-grow-1">
-														<span id="name2" class="fw-semibold d-block">Loading</span>
+														<span id="name2" class="fw-semibold d-block">Student Name</span>
 														<small class="text-muted">Student</small>
 													</div>
 												</div>
@@ -193,31 +193,52 @@
 											<div class="dropdown-divider"></div>
 										</li>
 										<li>
-											<a class="dropdown-item" href="#">
-											<i class="bx bx-user me-2"></i>
-											<span class="align-middle">My Profile</span>
+											<a class="dropdown-item" href="edit-account.html">
+											<i class="bx bxs-user me-2"></i>
+											<span class="align-middle">Edit Account</span>
 											</a>
 										</li>
 										<li>
-											<a class="dropdown-item" href="#">
-											<i class="bx bx-cog me-2"></i>
-											<span class="align-middle">Settings</span>
-											</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="#">
-											<span class="d-flex align-items-center align-middle">
-											<i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-											<span class="flex-grow-1 align-middle">Billing</span>
-											<span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-											</span>
+											<a class="dropdown-item" href="change-password.html">
+											<i class="bx bxs-lock-alt me-2"></i>
+											<span class="align-middle">Change Password</span>
 											</a>
 										</li>
 										<li>
 											<div class="dropdown-divider"></div>
 										</li>
 										<li>
-											<a class="dropdown-item" href="/">
+											<script>
+												vhtml = null
+												function logout() {
+												  localStorage.clear()
+												  firebase.auth().signOut().then((out) => {
+												    let timerInterval
+												    Swal.fire({
+												      title: 'Signing Out!',
+												      html: 'Redirecting to login in <b></b> milliseconds.',
+												      timer: 6000,
+												      timerProgressBar: true,
+												      didOpen: () => {
+												        Swal.showLoading()
+												        const b = Swal.getHtmlContainer().querySelector('b')
+												        timerInterval = setInterval(() => {
+												          b.textContent = Swal.getTimerLeft()
+												        }, 100)
+												      },
+												      willClose: () => {
+												        clearInterval(timerInterval)
+												      }
+												    }).then((result) => {
+												      /* Read more about handling dismissals below */
+												      if (result.dismiss === Swal.DismissReason.timer) {
+												        location.replace("/index.html")
+												      }
+												    })
+												  })
+												}
+											</script>
+											<a id="lgu" onclick="logout()" class="dropdown-item" style="cursor: pointer;">
 											<i class="bx bx-power-off me-2"></i>
 											<span class="align-middle">Log Out</span>
 											</a>

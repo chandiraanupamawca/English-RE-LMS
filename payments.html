@@ -261,6 +261,7 @@
 									<div class="card mb-4">
 										<h5 class="card-header">All Payments</h5>
 										<div class="card-body" id="parentz">
+											<span class="badge bg-label-warning rounded-pill" id="nullbanner" style="display: none;">No Payment Records found</span>
 											<div class="table-responsive text-nowrap"  id="paytab" style="display:none ;">
 												<h4 class="text-primary  fw-bold clzname" id="clzname">The Class Name</h4>
 												<table class="table paytab">
@@ -462,6 +463,11 @@
 		<!-- Vendors JS -->
 		<!-- Main JS -->
 		<script src="assets/js/main.js"></script>
+		<script>
+			var firstName = localStorage.getItem("fn")
+			var lastName = localStorage.getItem("ln")
+			$$("name2").innerText = firstName + " " + lastName
+		</script>
 		<!-- Page JS -->
 		<!-- Place this tag in your head or just before your close body tag. -->
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
