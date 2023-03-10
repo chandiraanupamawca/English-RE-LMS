@@ -61,6 +61,7 @@ function viewclass() {
         uid = user.uid;
         // ...
      } else {
+        localStorage.clear()
         location.replace("login.html")
         // User is signed out
         // ...
@@ -116,6 +117,7 @@ function viewclass() {
                     dbRefObject74522ew.once('value', snap => paynot(snap.val()));
                     // ...
                  } else {
+                    localStorage.clear()
                     location.replace("login.html")
                     // User is signed out
                     // ...

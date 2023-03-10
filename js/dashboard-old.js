@@ -14,7 +14,7 @@ firebase.auth().onAuthStateChanged((user) => {
 	if (localStorage.getItem("pw") == null) {
 		localStorage.clear()
 		firebase.auth().signOut()
-		location.replace("login.html")
+		location.replace("login")
 	}
 
 	if (user) {
@@ -35,7 +35,8 @@ firebase.auth().onAuthStateChanged((user) => {
 		dbRefObjectaz.on('value', snap => erl(snap.val()));
 		// ...
 	} else {
-		location.replace("login.html")
+		localStorage.clear()
+		location.replace("login")
 		// User is signed out
 		// ...
 	}

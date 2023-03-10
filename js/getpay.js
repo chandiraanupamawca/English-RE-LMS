@@ -124,6 +124,7 @@ firebase.auth().onAuthStateChanged((user) => {
 		firebase.database().ref('enroll/' + uid).once('value', snap => getpay(snap.val()))
 		// ...
 	} else {
+		localStorage.clear()
 		location.replace("login")
 		// User is signed out
 		// ...

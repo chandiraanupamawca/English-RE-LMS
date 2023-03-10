@@ -25,7 +25,8 @@ firebase.auth().onAuthStateChanged((user) => {
        xhr.send(data)
     // ...
   } else {
-    location.replace("login.html")
+    localStorage.clear()
+    location.replace("login")
     // User is signed out
     // ...
   }

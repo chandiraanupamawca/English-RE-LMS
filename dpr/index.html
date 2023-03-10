@@ -318,7 +318,8 @@ body .dribbble img {
     location.replace("student")
     // ...
   } else {
-    location.replace("login.html")
+    localStorage.clear()
+    location.replace("login")
     // User is signed out
     // ...
   }
